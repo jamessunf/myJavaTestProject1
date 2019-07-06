@@ -5,33 +5,40 @@
  */
 package tutoring.DTO;
 
-import tutoring.BusinessObjects.StudentBuilder;
+import java.util.ArrayList;
+import java.util.List;
+import tutoring.BusinessObjects.MemberBuilder;
+import tutoring.BusinessObjects.StudentBehaviour;
+import tutoring.BusinessObjects.StudentCourseBehaviour;
+import tutoring.BusinessObjects.TutorCourseBehaviour;
 
 /**
  *
  * @author feng
  */
-public class  Student extends Tutor {
+public class  Student  {
 
     private int studentID;
     private String lastName;
     private String firstName;
     private String email;
     private String phoneNumber;
-    
+    StudentBehaviour studentbehaviour;
     
 	/*
 	 * This constructor accepts a PhoneBuilder which is then used
 	 * to obtain the data for the fields.
 	 */
-	public Student(StudentBuilder builder)
+	public Student(MemberBuilder builder)
 	{
-	    super(builder);
+	   
             studentID = builder.getStudentID();
 	    firstName = builder.getFirstName();
 	    lastName = builder.getLastName();
 	    phoneNumber = builder.getPhoneNumber();
 	    email = builder.getEmail();
+            
+            this.studentbehaviour = StudentCourseBehaviour.getInstance();
 	}
         
         
@@ -43,6 +50,9 @@ public class  Student extends Tutor {
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
+                
+                this.studentbehaviour = StudentCourseBehaviour.getInstance();
+                
 	}
 
 	public Student(int studentID, String firstName, String lastName, String phoneNumber){ 
@@ -63,6 +73,7 @@ public class  Student extends Tutor {
 
 	public Student(){ 
 		this(0, null, null, null, null);
+               
 	}
 
     public int getStudentID() {
@@ -105,20 +116,30 @@ public class  Student extends Tutor {
         this.phoneNumber = phoneNumber;
     }
     
-    @Override
-	public String toString()
-	{
-		StringBuilder sb = new StringBuilder();
-		sb.append("[")
-                .append(studentID).append(" ")
-		.append(firstName).append(" ")
-		.append(lastName).append(" ")
-		.append(phoneNumber).append(" ")
-		.append(email).append(" ")                                    
-                .append("]"); // .append(System.lineSeparator());
-		return sb.toString() + super.toString(); 
-	}
+   
+    
+    public void addCourse(Course course) {
+       
+	this.studentbehaviour.addCourse( new SelectCourse(this.studentID,course.getCourseCode()));
+    }
 
+   
+    public void deleteCourse(Course course) {
+        this.studentbehaviour.deleteCourse(new SelectCourse(this.studentID,course.getCourseCode()));
+    }
+    
+    public List<SelectCourse> getSelectCourseById(){
+    
+        return this.studentbehaviour.StudentBehaviourType(this.getStudentID());
+    }
 
+    public String StudentBehaviourType() {
+        return this.studentbehaviour.StudentBehaviourType();
+       //return null;
+    }
+    
+   
+    
+    
     
 }

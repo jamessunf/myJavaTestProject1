@@ -14,6 +14,18 @@ public class Course {
     private String courseCode;
     private String courseName;
     private String courseDecription;
+    
+    public Course(String c,String n,String d){
+        
+        this.courseCode = c;
+        this.courseName = n;
+        this.courseDecription = d;
+    
+    }
+
+    public Course() {
+       this(null,null,null);
+    }
 
     public String getCourseCode() {
         return courseCode;

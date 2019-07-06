@@ -5,14 +5,13 @@
  */
 package tutoring.BusinessObjects;
 
-import tutoring.DTO.Student;
 import tutoring.DTO.Tutor;
 
 /**
  *
  * @author feng
  */
-public class StudentBuilder {
+public class MemberBuilder {
     
     private int studentID;
     private String lastName;
@@ -58,12 +57,12 @@ public class StudentBuilder {
 	/*
 	 * Constructor was marked private to enforce use of create() method
 	 */
-	private StudentBuilder() { }
+	private MemberBuilder() { }
 
 	/*
 	 * Returns an instance of this PersonBuilder
 	 */
-	public static StudentBuilder create() { return new StudentBuilder(); }
+	public static MemberBuilder create() { return new MemberBuilder(); }
 
 	/*
 	 * Each method accepts the data, sets the data into a field,
@@ -72,20 +71,20 @@ public class StudentBuilder {
 	 * E.g. Person p = PersonBuilder.create().personID(1).firstName("First").lastName("Last")
 	 *                              .phone("123").email("a@b.c").build();
 	 */
-	public StudentBuilder studentID (int studentID)     { this.studentID = studentID;   return this; }
-	public StudentBuilder firstName(String firstName) { this.firstName = firstName; return this; }
-	public StudentBuilder lastName (String lastName)  { this.lastName = lastName;   return this; }
-	public StudentBuilder phoneNumber(String phoneNumber){ this.phoneNumber = phoneNumber;return this; }
-	public StudentBuilder email    (String email)     { this.email = email;         return this; }
+	public MemberBuilder studentID (int studentID)     { this.studentID = studentID;   return this; }
+	public MemberBuilder firstName(String firstName) { this.firstName = firstName; return this; }
+	public MemberBuilder lastName (String lastName)  { this.lastName = lastName;   return this; }
+	public MemberBuilder phoneNumber(String phoneNumber){ this.phoneNumber = phoneNumber;return this; }
+	public MemberBuilder email    (String email)     { this.email = email;         return this; }
    
-        public StudentBuilder tutorID (int tutorID) { this.tutorID = tutorID; return this;}
-        public StudentBuilder status (String status){this.status = status; return this;}
-        public StudentBuilder experineceID(int experineceID){this.experineceID = experineceID; return this;}
+        public MemberBuilder tutorID (int tutorID) { this.tutorID = tutorID; return this;}
+        public MemberBuilder status (String status){this.status = status; return this;}
+        public MemberBuilder experineceID(int experineceID){this.experineceID = experineceID; return this;}
 
 	//Uses the Person(PersonBuilder) constructor to create and initialize a Person
-       // public Student build() { 
-          //  return new Student(this); 
+        public Tutor build() { 
+            return new Tutor(this); 
         
-       // }
+        }
     
 }

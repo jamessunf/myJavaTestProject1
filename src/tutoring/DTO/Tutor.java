@@ -5,20 +5,25 @@
  */
 package tutoring.DTO;
 
+import java.util.List;
+import tutoring.BusinessObjects.MemberBuilder;
+import tutoring.BusinessObjects.StudentBehaviour;
 import tutoring.BusinessObjects.StudentBuilder;
+
 
 /**
  *
  * @author feng
  */
-public class Tutor {
+public class Tutor extends Student {
     
     private int tutorID;
     private String status;
     private int experineceID;
     
-    public Tutor(StudentBuilder builder){
+    public Tutor(MemberBuilder builder){
         
+        super(builder);
         this.tutorID = builder.getTutorID();
         this.experineceID = builder.getExperineceID();
         this.status = builder.getStatus();
@@ -32,15 +37,19 @@ public class Tutor {
 	}
 
 	public Tutor(int tutorID, String status){
-		this(tutorID, null, 0);
+		this(tutorID, status, 0);
 	}
         public Tutor(int tutorID){
-		this(tutorID, null);
+		this(tutorID,null,0);
 	}
 
 	public Tutor(){ 
-		this(0, null, 0);
+		this(-1, null, 0);
 	}
+
+   
+
+   
 
     public int getTutorID() {
         return tutorID;
@@ -65,19 +74,31 @@ public class Tutor {
     public void setExperineceID(int experineceID) {
         this.experineceID = experineceID;
     }
-    
-         @Override
-	public String toString()
-	{
-		StringBuilder sb = new StringBuilder();
-		sb.append("[")
-                .append(tutorID).append(" ")
-		.append(status).append(" ")
-		.append(experineceID).append(" ")		                                   
-                .append("]"); // .append(System.lineSeparator());
-		return sb.toString() ;
-	}
- 
+    /**
+     * 
+     * @param course 
+     */
+    @Override
+     public void addCourse(Course course) {
+       
+	this.studentbehaviour.addCourse( new SelectCourse(this.getTutorID(),course.getCourseCode()));
+    }
+
+   /**
+    * 
+    * @param course 
+    */
+    @Override
+    public void deleteCourse(Course course) {
+        this.studentbehaviour.deleteCourse(new SelectCourse(this.getTutorID(),course.getCourseCode()));
+    }
+
+   
+    public void changeBehaviourTo(StudentBehaviour studentbehaviour){
+      
+             this.studentbehaviour = studentbehaviour;
+           
+    }
     
     
 }
