@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="LAPTOP-CU2KS9DL" name="tutoring.test.TutorTest" skipped="0" tests="10" time="0.094" timestamp="2019-07-06T05:18:42">
+<testsuite errors="0" failures="0" hostname="LAPTOP-CU2KS9DL" name="tutoring.test.StudentCourseBehaviourTest" skipped="0" tests="7" time="0.094" timestamp="2019-07-06T05:24:27">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="CA" />
     <property name="javac.test.classpath" value=":build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
     <property name="libs.jsf20.maven-pom" value="" />
     <property name="libs.spring-webmvc4.0.src" value="" />
-    <property name="javac.includes" value="tutoring/test/TutorTest.java" />
+    <property name="javac.includes" value="tutoring/test/StudentCourseBehaviourTest.java" />
     <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar" />
     <property name="javadoc.windowtitle" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
@@ -36,7 +36,7 @@
     <property name="libs.hamcrest.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
     <property name="libs.javac-api.javadoc" value="" />
     <property name="os.name" value="Windows 10" />
-    <property name="test.class" value="tutoring.test.TutorTest" />
+    <property name="test.class" value="tutoring.test.StudentCourseBehaviourTest" />
     <property name="libs.beans-binding.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\beansbinding-1.2.1.jar" />
     <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
     <property name="ap.proc.none.internal" value="" />
@@ -56,7 +56,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tutoring.test.TutorTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\test\results\TEST-tutoring.test.TutorTest.xml crashfile=C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\junitvmwatcher3422353374094279228.properties propsfile=C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\junit9071532636580425354.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tutoring.test.StudentCourseBehaviourTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\test\results\TEST-tutoring.test.StudentCourseBehaviourTest.xml crashfile=C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\junitvmwatcher6983010843528827123.properties propsfile=C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\junit435833539059473929.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -81,7 +81,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_211\jre\lib\endorsed" />
     <property name="libs.Comet-GlassFish-v3.maven-pom" value="" />
-    <property name="test.includes" value="tutoring/test/TutorTest.java" />
+    <property name="test.includes" value="tutoring/test/StudentCourseBehaviourTest.java" />
     <property name="netbeans.dynamic.classpath" value="C:\Program Files\NetBeans 8.2\platform\core\asm-all-5.0.1.jar;C:\Program Files\NetBeans 8.2\platform\core\core-base.jar;C:\Program Files\NetBeans 8.2\platform\core\core.jar;C:\Program Files\NetBeans 8.2\platform\core\org-netbeans-libs-asm.jar;C:\Program Files\NetBeans 8.2\platform\core\org-openide-filesystems-compat8.jar;C:\Program Files\NetBeans 8.2\platform\core\org-openide-filesystems.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
     <property name="java.vm.specification.version" value="1.8" />
     <property name="libs.hibernate4-support.src" value="" />
@@ -98,7 +98,7 @@
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
     <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
-    <property name="javac.includesfile.binary" value="C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\null1580171253" />
+    <property name="javac.includesfile.binary" value="C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\null1427357866" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value=":build/classes:C:\Program Files\NetBeans 8.2\platform\modules\ext\junit-4.12.jar:C:\Program Files\NetBeans 8.2\platform\modules\ext\hamcrest-core-1.3.jar" />
@@ -112,7 +112,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.2\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.2\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
-    <property name="javac.includes.binary" value="C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\test\classes\tutoring\test\TutorTest.class" />
+    <property name="javac.includes.binary" value="C:\Users\feng\Documents\NetBeansProjects\MyNetBeans\Feng.Sun.Project1\build\test\classes\tutoring\test\StudentCourseBehaviourTest.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.2\extide\ant" />
     <property name="libs.junit_4.src" value="C:\Program Files\NetBeans 8.2\platform\docs\junit-4.12-sources.jar" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.2\platform\modules\ext\testng-6.8.1-dist.jar" />
@@ -405,27 +405,17 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.2\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="tutoring.test.TutorTest" name="testGetTutorID" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testChangeBehaviourTo" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testGetSelectCourseById" time="0.0">
-    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0&gt; but was:&lt;1&gt;
-	at tutoring.test.TutorTest.testGetSelectCourseById(TutorTest.java:168)
-</failure>
-  </testcase>
-  <testcase classname="tutoring.test.TutorTest" name="testDeleteCourse" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testAddCourse" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testGetExperineceID" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testSetStatus" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testSetTutorID" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testGetStatus" time="0.0" />
-  <testcase classname="tutoring.test.TutorTest" name="testSetExperineceID" time="0.0" />
-  <system-out><![CDATA[Testing getter of Tutor ID
-Testing type of student and conversion
-Testing getter of ID of Tutor experinece 
-Testing setter of Tutor status
-Testing setter of Tutor ID
-Testing getter of Tutor status
-Testing setter of Id of Tutor experinece
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testGetSelectCourseById" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testUpdateCourse" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testGetAllCourses" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testDeleteCourse" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testAddCourse" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testStudentBehaviourType" time="0.0" />
+  <testcase classname="tutoring.test.StudentCourseBehaviourTest" name="testGetInstance" time="0.0" />
+  <system-out><![CDATA[Testing student add courses to the list
+Testing add courses to the student
+Testing deletage type of student
+Testing student Singleton object
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

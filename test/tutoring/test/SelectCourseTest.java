@@ -1,7 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Course: CST8288_521 OOP with Design Patterns
+ * Assignment: Project 1
+ * Project Purpose: Part of Tutoring book system, using three patterns
+ * 
+ * File Name: SelectCourseTest.java 
+ * Professor: George Kriger
+ * Author: Feng Sun
+ * Date: Jul/7/2019
  */
 package tutoring.test;
 
@@ -12,11 +17,13 @@ import static org.junit.Assert.*;
 import tutoring.DTO.SelectCourse;
 
 /**
- *
+ *The test class to test SelectCourse class in all public methods
  * @author feng
  */
 public class SelectCourseTest {
-    
+    /**
+     * Test to SelectCourse class
+     */
     public SelectCourseTest() {
     }
 

@@ -1,7 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Course: CST8288_521 OOP with Design Patterns
+ * Assignment: Project 1
+ * Project Purpose: Part of Tutoring book system, using three patterns
+ * 
+ * File Name: TutorCourseBehaviourTest.java 
+ * Professor: George Kriger
+ * Author: Feng Sun
+ * Date: Jul/7/2019
  */
 package tutoring.test;
 
@@ -9,6 +14,7 @@ import java.util.ArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import tutoring.BusinessObjects.MemberBuilder;
 import tutoring.BusinessObjects.TutorCourseBehaviour;
 import tutoring.DTO.Course;
 import tutoring.DTO.SelectCourse;
@@ -16,11 +22,14 @@ import tutoring.DTO.Student;
 import tutoring.DTO.Tutor;
 
 /**
- *
+ *The test class to test TutorCourseBehaviour class in all public methods 
  * @author feng
  */
 public class TutorCourseBehaviourTest {
     
+    /**
+     * Test to TutorCourseBehaviour class
+     */
     public TutorCourseBehaviourTest() {
         
       
@@ -44,23 +53,20 @@ public class TutorCourseBehaviourTest {
     public void testAddCourse() {
         System.out.println("Testing tutor add courses to the list");
         
-      Course c1 = new Course("A001","java level1","java is a java");
-  
-      Tutor st = new Tutor();
-      st.changeBehaviourTo(TutorCourseBehaviour.getInstance());
-      Assert.assertEquals("Tutor Behaviour",st.StudentBehaviourType());
-      st.addCourse(c1);
+      ArrayList<SelectCourse> a = new ArrayList<>();
+         Course c1 = new Course("A001","java course level 1","This is the java course level 1");
+          Tutor t1 = MemberBuilder.create()
+                .studentID(2).lastName("james").firstName("mark").email("james@email.com").phoneNumber("613-457923")
+                .tutorID(50).status("Strong").experineceID(90).build();
            
-       ArrayList<SelectCourse> ac = (ArrayList<SelectCourse>) st.getAllCourses();
-       int beforeSize = ac.size()+1;
-       st.addCourse(c1);
-       ac = (ArrayList<SelectCourse>) st.getAllCourses();
-       int afterSize = ac.size();
-
-       Assert.assertEquals(beforeSize,afterSize);      
-      
-       
-      
+          
+            t1.changeBehaviourTo(TutorCourseBehaviour.getInstance());
+            t1.addTCourse(c1);
+            a = (ArrayList) t1.getTSelectCourseById();
+            
+            
+                 Assert.assertEquals(t1.getTutorID(),a.get(0).getId());
+                 Assert.assertEquals("A001",a.get(0).getCourseId());
     }
 
     /**
@@ -83,29 +89,7 @@ public class TutorCourseBehaviourTest {
     @Test
     public void testGetAllCourses() {
               
-         System.out.println("Testing get all list");
-         
-          Tutor st = new Tutor();    
-      st.changeBehaviourTo(TutorCourseBehaviour.getInstance());
-      Assert.assertEquals("Tutor Behaviour",st.StudentBehaviourType());
-      
-      Course c1 = new Course("A001","java level1","java is a java");
-      Course c2 = new Course("A002","java leve22","java is w java");
-      Course c3 = new Course("A003","java leve33","java is f java");
-      Course c4 = new Course("A004","java leve44","java is ava");
-      Course c5 = new Course("A005","java leve55","javaba");
-      
-       ArrayList<SelectCourse> ac = (ArrayList<SelectCourse>) st.getAllCourses();
-       int beforeSize = ac.size()+5;
-        st.addCourse(c1);
-        st.addCourse(c2);
-        st.addCourse(c3);
-        st.addCourse(c4);
-        st.addCourse(c5);
-       ac = (ArrayList<SelectCourse>) st.getAllCourses();
-       int afterSize = ac.size();
-
-       Assert.assertEquals(beforeSize,afterSize);   
+        
       
     }
 
